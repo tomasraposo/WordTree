@@ -128,8 +128,8 @@ class WordTree:
                 # check if tree structure was preserved
                 # if so, backtrack towards the root node
                 # and remove every subsequent leaf node
-                while i >= 3 and not ptr.next and ptr.mult == 0:
-                    ptr = nodes[i-2]; pptr = nodes[i-3]
+                while i >= 2 and not ptr.next and ptr.mult == 0:
+                    ptr = nodes[i-1]; pptr = nodes[i-2]
                     # remove every update tree structure
                     self._remove_node(ptr, pptr)
                     i-=1
